@@ -10,30 +10,38 @@ to test the overall process of calling these APIs.
 ## Test
 
 * `GET` Request:
+
 [ex:general-get-example]
 
 * `POST` Request:
+
 [ex:general-post-example]
 
 * JSON Assertion: (property order in response does not affect test)
+
 [ex:simple-json-assertion]
 
 * JSON Request:
+
 [ex:json-request-example]
 
 * JSON Request/Assertion loaded from file:
+
 [ex:load-from-file]
 
 * Form URL Encoded Data Request:
+
 [ex:form-url-encoded-request]
 
 * Bind the response entity to a model object:
+
 [ex:bound-data] 
 
 ## Dependency
 
 Use a dependency management tool such as Maven to download the Bastion library for use in your project. Add the following
 dependency to your POM file:
+
 ```xml
 <dependency>
     <groupId>rocks.bastion</groupId>
@@ -44,6 +52,7 @@ dependency to your POM file:
 ```
 
 Alternatively, use Groovy Grapes to use Bastion in your Groovy tests/scripts:
+
 ```groovy
 @Grapes(
     @Grab(group='rocks.bastion', module='bastion', version='[VERSION]')

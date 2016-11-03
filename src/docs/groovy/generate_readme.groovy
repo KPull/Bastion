@@ -34,3 +34,6 @@ readmeFileText.eachMatch("\\[ex:([A-Za-z0-1\\-]+?)\\]") {
 
 def targetReadme = new File((String) readmeDst)
 targetReadme.write(readmeFileText, 'UTF-8')
+
+def targetSiteIndex = new File((String) siteIndexDst)
+targetSiteIndex.write(readmeFileText, 'UTF-8')

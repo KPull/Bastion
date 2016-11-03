@@ -169,7 +169,7 @@
                 <executions>
                     <execution>
                         <id>docs-toc</id>
-                        <phase>process-sources</phase>
+                        <phase>pre-site</phase>
                         <goals>
                             <goal>execute</goal>
                         </goals>
@@ -190,6 +190,10 @@
                                 <property>
                                     <name>readmeDst</name>
                                     <value>${project.basedir}/README.md</value>
+                                </property>
+                                <property>
+                                    <name>siteIndexDst</name>
+                                    <value>${project.basedir}/src/site/markdown/index.md</value>
                                 </property>
                                 <property>
                                     <name>sources</name>
@@ -316,6 +320,23 @@
                     <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                     <autoReleaseAfterClose>false</autoReleaseAfterClose>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.3</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>lt.velykis.maven.skins</groupId>
+                        <artifactId>reflow-velocity-tools</artifactId>
+                        <version>1.1.1</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.velocity</groupId>
+                        <artifactId>velocity</artifactId>
+                        <version>1.7</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>
