@@ -4,4 +4,4 @@ build:
     - script:
         name: Maven Build
         code: |
-          mvn install
+          sudo mvn install
